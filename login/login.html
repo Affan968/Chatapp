@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Welcome <br> Back</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="login-section">
+            <div class="login-box">
+                <h2>Sign in</h2>
+                <form onsubmit="signinpage(event)">
+                    <div class="input-group">
+                        <label >Email Address</label>
+                        <input id="email" placeholder="Enter your email" type="email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input id="password" placeholder="Enter your password" type="password" required>
+                    </div>
+
+                    <div class="options">
+                        <label><input type="checkbox"> Remember Me</label>
+                    </div>
+
+                    <button type="submit" class="sign-in-btn" id="signinnow">Sign in now</button>
+                    
+                    <a href="../index.html" class="forgot-password">Signup</a>
+
+                    <p class="terms">
+                        By clicking on "Sign in now" you agree to <br>
+                        <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+<script type="module" src="login.js"></script>
+<script type="module" src="../config/configs.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Social Feed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <div class="main-container">
+        <header class="navbar">
+            <div class="logo">
+                <a href="#">SocialWave</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-home"></i></a>
+                <a href="#"><i class="fas fa-users"></i></a>
+                <a href="#"><i class="fas fa-bell"></i></a>
+                <div class="profile-pic-small">
+                    <img src="https://via.placeholder.com/30" alt="Profile">
+                </div>
+                <button class="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <aside class="left-sidebar">
+                <div class="user-profile-card">
+                    <div class="profile-pic-large">
+                        <img src="https://via.placeholder.com/80" alt="User Profile">
+                    </div>
+                    <h4>John Doe</h4>
+                    <p>@johndoe</p>
+                    <div class="profile-stats">
+                        <span><strong>1.2K</strong> Followers</span>
+                        <span><strong>345</strong> Following</span>
+                    </div>
+                    <button class="edit-profile-btn">Edit Profile</button>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-newspaper"></i> Feed</a></li>
+                        <li><a href="#"><i class="fas fa-user-friends"></i> Friends</a></li>
+                        <li><a href="#"><i class="fas fa-comments"></i> Messages</a></li>
+                        <li><a href="#"><i class="fas fa-images"></i> Photos</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="feed-area">
+                <div class="create-post-card">
+                    <div class="post-header">
+                        <div class="profile-pic-small">
+                            <img src="https://via.placeholder.com/30" alt="Profile">
+                        </div>
+                        <textarea placeholder="What's on your mind, John?"></textarea>
+                    </div>
+                    <div class="post-actions">
+                        <button><i class="fas fa-image"></i> Photo/Video</button>
+                        <button><i class="fas fa-tag"></i> Tag Friends</button>
+                        <button class="share-btn">Share Post</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-header">
+                        <div class="profile-pic-small">
+                            <img src="https://via.placeholder.com/40" alt="User">
+                        </div>
+                        <div>
+                            <h4>Jane Smith</h4>
+                            <p class="post-time">2 hours ago</p>
+                        </div>
+                    </div>
+                    <p class="post-text">Enjoying the beautiful mountain views today! #mountains #nature</p>
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=800&q=80" alt="Post Image">
+                    </div>
+                    <div class="post-footer">
+                        <button><i class="far fa-thumbs-up"></i> Like (12)</button>
+                        <button><i class="far fa-comment"></i> Comment (3)</button>
+                        <button><i class="fas fa-share"></i> Share</button>
+                    </div>
+                </div>
+
+                <div class="post-card">
+                    <div class="post-header">
+                        <div class="profile-pic-small">
+                            <img src="https://via.placeholder.com/40" alt="User">
+                        </div>
+                        <div>
+                            <h4>My SocialWave Team</h4>
+                            <p class="post-time">Yesterday</p>
+                        </div>
+                    </div>
+                    <p class="post-text">Exciting news! We just rolled out new features. Check them out!</p>
+                    <div class="post-footer">
+                        <button><i class="far fa-thumbs-up"></i> Like (25)</button>
+                        <button><i class="far fa-comment"></i> Comment (8)</button>
+                        <button><i class="fas fa-share"></i> Share</button>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
