@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,4 +53,60 @@
     <script type="module" src="index.js"></script>
     <script type="module" src="./config/configs.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Join Us <br> Today</h1>
+            <p>Create your account to explore our mountain adventures and get exclusive access to our community features.</p>
+            
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="login-section">
+            <div class="login-box">
+                <h2>Create Account</h2>
+                <form id="signup-form" onsubmit="signuppage(event)">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="signup-name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="signup-email" placeholder="example@mail.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="signup-password" placeholder="Create password" required>
+                    </div>
+
+                    <button type="submit" id="signup-btn" class="sign-in-btn">Sign up now</button>
+                    
+                    <p class="forgot-password">Already have an account? <a href="./login/login.html" style="color: #e65100; font-weight: bold;">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+    <script type="module" src="./config/configs.js"></script>
+</body>
+>>>>>>> b853f791e6e776f6bee3fffade066b4ab3b30668
 </html>
