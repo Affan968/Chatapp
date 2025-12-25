@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { auth, signInWithEmailAndPassword } from "../config/configs.js";
 
 window.signinpage = function(event) {
@@ -34,8 +33,6 @@ window.signinpage = function(event) {
         alert("Error: " + errorMessage);
         console.error("Login Error:", errorCode, errorMessage);
     });
-=======
-import { auth, signInWithEmailAndPassword } from "../config/config.js"
 
 window.signinpage=async function(event){
     event.preventDefault()
@@ -59,5 +56,4 @@ window.signinpage=async function(event){
 
   signinBtn.addEventListener("click",signinpage)
 
->>>>>>> b853f791e6e776f6bee3fffade066b4ab3b30668
-}
+}}

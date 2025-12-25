@@ -384,8 +384,7 @@ ul {
         flex-direction: column;
         gap: 5px;
     }
-=======
-/* --- Common Styles (can be from login/signup) --- */
+}
 * {
     margin: 0;
     padding: 0;
