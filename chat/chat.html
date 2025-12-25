@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialWave - Messenger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../Dashboard/style.css"> <style>
+        .chat-layout { display: flex; height: 90vh; margin-top: 10px; background: white; border-radius: 8px; overflow: hidden; }
+        .friends-sidebar { width: 30%; border-right: 1px solid #eee; overflow-y: auto; }
+        .chat-window { width: 70%; display: flex; flex-direction: column; }
+        .messages-area { flex-grow: 1; padding: 20px; overflow-y: auto; background: #f9f9f9; }
+        .message-input-area { padding: 15px; border-top: 1px solid #eee; display: flex; gap: 10px; }
+        .message-input-area input { flex-grow: 1; padding: 10px; border-radius: 20px; border: 1px solid #ccc; outline: none; }
+        .friend-item { padding: 15px; border-bottom: 1px solid #f0f0f0; cursor: pointer; transition: 0.2s; }
+        .friend-item:hover { background: #fff5e6; }
+        .my-msg { background: #e65100; color: white; align-self: flex-end; padding: 8px 12px; border-radius: 15px 15px 0 15px; margin-bottom: 10px; max-width: 70%; margin-left: auto; }
+        .friend-msg { background: #eee; color: #333; align-self: flex-start; padding: 8px 12px; border-radius: 15px 15px 15px 0; margin-bottom: 10px; max-width: 70%; }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header class="navbar">
+            <div class="logo"><a href="../Dashboard/dashboard.html">SocialWave</a></div>
+            <div class="nav-icons"><a href="../Dashboard/dashboard.html"><i class="fas fa-arrow-left"></i> Back to Feed</a></div>
+        </header>
+
+        <div class="chat-layout">
+            <div class="friends-sidebar" id="friends-list">
+                <p style="padding: 20px; color: gray;">Loading friends...</p>
+            </div>
+
+            <div class="chat-window">
+                <div id="chat-header" style="padding: 15px; border-bottom: 1px solid #eee; font-weight: bold;">
+                    Select a friend to start chatting
+                </div>
+                <div class="messages-area" id="messages-container">
+                    </div>
+                <div class="message-input-area" id="input-box" style="display: none;">
+                    <input type="text" id="msg-input" placeholder="Type a message...">
+                    <button id="send-btn" class="add-btn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="chat.js"></script>
+    <script type="module" src="../config/configs.js"></script>
+</body>
+</html>
