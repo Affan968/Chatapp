@@ -15,28 +15,57 @@ onAuthStateChanged(auth, (user) => {
 
 // 1. Load Accepted Friends
 async function loadMyFriends(currentUid) {
-    console.log("running messages")
     const friendsListDiv = document.getElementById("friends-list");
     
-    // Check accepted requests (jahan aap sender ho ya receiver)
+    // Status 'accepted' wali requests ko dekho
     const q = query(collection(db, "friendRequests"), where("status", "==", "accepted"));
     
     onSnapshot(q, async (snapshot) => {
-        friendsListDiv.innerHTML = "";
-        if (snapshot.empty) friendsListDiv.innerHTML = "<p style='padding:15px;'>No friends yet.</p>";
+        // Ek 'Map' banayein jo sirf unique friend IDs save karega
+        const uniqueFriendsMap = new Map();
 
-        snapshot.forEach(async (requestDoc) => {
-            const data = requestDoc.data();
-            // Pata lagao friend ki ID kaunsi hai
-            const friendId = data.from === currentUid ? data.to : data.from;
+        // Pehle saari unique IDs jama karein
+        for (const docReq of snapshot.docs) {
+            const data = docReq.data();
             
             if (data.from === currentUid || data.to === currentUid) {
-                const friendSnap = await getDoc(doc(db, "users", friendId));
-                const friendData = friendSnap.data();
+                const friendId = (data.from === currentUid) ? data.to : data.from;
+                
+                // Agar ye ID pehle map mein nahi hai, toh add karein
+                if (!uniqueFriendsMap.has(friendId)) {
+                    uniqueFriendsMap.set(friendId, true);
+                }
+            }
+        }
 
+        // Ab UI saaf karein aur sirf unique friends load karein
+        friendsListDiv.innerHTML = "";
+        
+        if (uniqueFriendsMap.size === 0) {
+            friendsListDiv.innerHTML = "<p style='padding:15px;'>No friends yet.</p>";
+            return;
+        }
+
+        // Map se IDs nikaal kar unka data fetch karein
+        uniqueFriendsMap.forEach(async (value, friendId) => {
+            const friendSnap = await getDoc(doc(db, "users", friendId));
+            if (friendSnap.exists()) {
+                const friendData = friendSnap.data();
+                
                 const div = document.createElement("div");
                 div.className = "friend-item";
-                div.innerHTML = `<strong>${friendData.name}</strong><br><small>${friendData.email}</small>`;
+                div.style.cursor = "pointer";
+                div.innerHTML = `
+                    <div class="user-info-wrapper" style="display:flex; align-items:center; gap:10px; padding:10px;">
+                        <div class="avatar-circle" style="width:35px; height:35px; border-radius:50%; background:#e65100; color:white; display:flex; align-items:center; justify-content:center;">
+                            ${friendData.name.charAt(0)}
+                        </div>
+                        <div>
+                            <strong style="display:block;">${friendData.name}</strong>
+                            <small style="color:gray;">${friendData.email}</small>
+                        </div>
+                    </div>
+                `;
                 div.onclick = () => startChat(friendId, friendData.name);
                 friendsListDiv.appendChild(div);
             }

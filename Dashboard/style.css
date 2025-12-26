@@ -709,6 +709,171 @@ ul {
     background-color: #f0f2f5;
     color: #e65100;
 }
+/* --- Professional Sidebar Widgets --- */
+.widget-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+}
+
+.widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.widget-header h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1b;
+}
+
+.view-all {
+    font-size: 12px;
+    color: #e65100;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* User Item Style (Common for all lists) */
+.user-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f2f5;
+    transition: 0.3s;
+}
+
+.user-item:last-child { border-bottom: none; }
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #eee;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.user-info {
+    flex-grow: 1;
+}
+
+.user-info .user-name {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Buttons Styling */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-accept, .btn-add {
+    background: #e65100;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-reject {
+    background: #f0f2f5;
+    color: #333;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-accept:hover, .btn-add:hover { background: #bf4300; }
+.btn-reject:hover { background: #e4e6eb; }
+
+.empty-msg {
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+    padding: 10px;
+}
+/* Sidebar User Item Style */
+.user-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f2f5;
+}
+
+.user-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transform: translateY(-2px);
+}
+
+.user-info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-circle {
+    width: 35px;
+    height: 35px;
+    background: #e65100;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.user-name {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600 !important;
+}
+
+/* Modern Buttons */
+.add-btn {
+    background: #e65100 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    padding: 6px 12px !important;
+    border-radius: 6px !important;
+    transition: 0.2s;
+}
+
+.chat-link {
+    background: #fff3e0;
+    color: #e65100;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.chat-link:hover {
+    background: #e65100;
+    color: white;
+}
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
